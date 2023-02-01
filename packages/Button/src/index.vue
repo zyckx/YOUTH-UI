@@ -1,15 +1,16 @@
 <template>
-  <button class="my-button" @click="$emit('click', $event)">
+  <button class="y-button" @click="$emit('click', $event)">
     <slot></slot>
   </button>
 </template>
 
 <script lang="ts" setup>
+// eslint-disable-next-line no-undef
 defineEmits(['click']);
 </script>
 
 <style scoped lang="scss">
-.my-button {
+.y-button {
   appearance: none;
   padding: 5px 10px;
   background: lightskyblue;

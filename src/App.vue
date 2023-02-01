@@ -1,5 +1,5 @@
 <template>
-  <div class="my-kit-doc">
+  <div class="youth-doc">
     <aside>
       <router-link v-for="(link, index) in data.links" :key="index" :to="link.path">{{
         link.name
@@ -15,6 +15,7 @@
 import ComponentList from 'packages/list.json';
 import { reactive } from 'vue';
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const data = reactive({
   links: ComponentList.map((item) => ({
     path: `/components/${item.compName}`,
@@ -29,7 +30,7 @@ body {
   margin: 0;
   padding: 0;
 }
-.my-kit-doc {
+.youth-doc {
   display: flex;
   min-height: 100vh;
   aside {

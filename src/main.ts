@@ -1,12 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router';
 
 import './assets/markdown.css';
 
-import MyKit from '../packages';
+import Youth from '../packages';
 import Preview from './components/Preview.vue';
 
-const app = createApp(App)
-app.component('Preview', Preview)
-app.use(MyKit).use(router).mount('#app')
+const app = createApp(App);
+app.component('Preview', Preview);
+app.use(Youth).use(router).mount('#app');
