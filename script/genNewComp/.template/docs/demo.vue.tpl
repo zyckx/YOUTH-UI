@@ -1,5 +1,5 @@
 <template>
   <div>
-    <my-{{ compClassName }} />
+    <y-{{ compClassName }} />
   </div>
 </template>
