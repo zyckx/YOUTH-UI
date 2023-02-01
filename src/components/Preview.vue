@@ -1,5 +1,5 @@
 <template>
-  <div class="mykit-preview">
+  <div class="youth-preview">
     <section>
       <slot></slot>
     </section>
@@ -43,7 +43,7 @@ export default {
   },
   computed: {
     previewSourceCode() {
-      return this.sourceCode.replace(/'\.\.\/\.\.\/index'/g, `'@tencent/my-kit'`);
+      return this.sourceCode.replace(/'\.\.\/\.\.\/index'/g, `'@tencent/youth'`);
     },
   },
   async mounted() {
@@ -56,7 +56,7 @@ export default {
         ).default;
       } else {
         this.sourceCode = await fetch(
-          `${isDev ? '' : '/MY-Kit'}/packages/${this.compName}/docs/${this.demoName}.vue`,
+          `${isDev ? '' : '/Youth'}/packages/${this.compName}/docs/${this.demoName}.vue`,
         ).then((res) => res.text());
       }
     }
@@ -78,7 +78,7 @@ export default {
 pre {
   line-height: 0;
 }
-.mykit-preview {
+.youth-preview {
   border: 4px;
   border: 1px dashed #e7e7e7;
   padding: 10px;
