@@ -9,6 +9,11 @@
     "f2elint-scan": "f2elint scan",
     "f2elint-fix": "f2elint fix"
   },
+  "workspace": [
+    "packages/*",
+    "src",
+    "script"
+  ],
   "dependencies": {
     "prismjs": "^1.25.0",
     "vue": "^3.2.23"
