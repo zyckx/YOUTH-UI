@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     lib: {
-      entry: resolve(__dirname, '../packages/index.ts'),
+      entry: resolve(__dirname, '../packages/components/index.ts'),
       name: 'Youth',
       fileName: (format) => `youth.${format}.js`,
     },

@@ -51,12 +51,12 @@ export default {
       if (isDev) {
         this.sourceCode = (
           await import(
-            /* @vite-ignore */ `../../packages/${this.compName}/docs/${this.demoName}.vue?raw`
+            /* @vite-ignore */ `../../packages/components/${this.compName}/docs/${this.demoName}.vue?raw`
           )
         ).default;
       } else {
         this.sourceCode = await fetch(
-          `${isDev ? '' : '/Youth'}/packages/${this.compName}/docs/${this.demoName}.vue`,
+          `${isDev ? '' : '/Youth'}/packages/components/${this.compName}/docs/${this.demoName}.vue`,
         ).then((res) => res.text());
       }
     }
