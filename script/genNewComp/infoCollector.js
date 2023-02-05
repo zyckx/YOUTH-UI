@@ -2,7 +2,7 @@ const inquirer = require('inquirer')
 const fs = require('fs-extra')
 const { resolve } = require('path')
 
-const listFilePath = '../../packages/list.json'
+const listFilePath = '../../packages/components/list.json'
 
 const RegxMap = {
   IS_COMP_NAME: /^[A-Z]/,

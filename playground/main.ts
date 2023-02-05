@@ -4,7 +4,7 @@ import router from './router';
 
 import './assets/markdown.css';
 
-import Youth from '../packages';
+import Youth from '../packages/components';
 import Preview from './components/Preview.vue';
 
 const app = createApp(App);

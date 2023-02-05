@@ -6,12 +6,6 @@
     "compClassName": "button"
   },
   {
-    "compName": "Foo",
-    "compZhName": "测试组件",
-    "compDesc": "默认：这是一个新组件",
-    "compClassName": "foo"
-  },
-  {
     "compName": "Input",
     "compZhName": "输入框",
     "compDesc": "输入框",

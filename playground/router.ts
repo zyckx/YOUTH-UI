@@ -11,25 +11,13 @@ const routes = [
     title: '按钮',
     name: 'Button',
     path: '/components/Button',
-    component: () => import('packages/Button/docs/README.md'),
-  },
-  {
-    title: '测试组件',
-    name: 'Foo',
-    path: '/components/Foo',
-    component: () => import('packages/Foo/docs/README.md'),
+    component: () => import('packages/components/Button/docs/README.md'),
   },
   {
     title: '输入框',
     name: 'Input',
     path: '/components/Input',
-    component: () => import('packages/Input/docs/README.md'),
-  },
-  {
-    title: '测试',
-    name: 'Test',
-    path: '/components/Test',
-    component: () => import('packages/Test/docs/README.md'),
+    component: () => import('packages/components/Input/docs/README.md'),
   },
 ];
 

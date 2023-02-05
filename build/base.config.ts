@@ -7,7 +7,7 @@ import Markdown from 'vite-plugin-md';
 export default defineConfig({
   resolve: {
     alias: {
-      '@': resolve(__dirname, '../src'),
+      '@': resolve(__dirname, '../playground'),
       packages: resolve(__dirname, '../packages'),
     },
   },
