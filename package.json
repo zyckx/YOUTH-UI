@@ -1,6 +1,7 @@
 {
   "name": "youth",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "dev": "vite --config ./build/base.config.ts",
     "build:doc": "vue-tsc --noEmit && vite build --config ./build/doc.config.ts && node script/copyDir.js",
@@ -9,11 +10,6 @@
     "f2elint-scan": "f2elint scan",
     "f2elint-fix": "f2elint fix"
   },
-  "workspace": [
-    "packages/*",
-    "src",
-    "script"
-  ],
   "dependencies": {
     "prismjs": "^1.25.0",
     "vue": "^3.2.23"
