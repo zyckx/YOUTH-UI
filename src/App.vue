@@ -6,14 +6,14 @@
       }}</router-link>
     </aside>
     <main>
-      <router-view></router-view>
+      <router-view />
     </main>
   </div>
 </template>
 
 <script setup>
-import ComponentList from 'packages/components/list.json';
 import { reactive } from 'vue';
+import ComponentList from 'packages/components/list.json';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const data = reactive({
   links: ComponentList.map((item) => ({
