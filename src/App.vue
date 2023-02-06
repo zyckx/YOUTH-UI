@@ -14,7 +14,6 @@
 <script setup>
 import ComponentList from 'packages/components/list.json';
 import { reactive } from 'vue';
-
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const data = reactive({
   links: ComponentList.map((item) => ({
