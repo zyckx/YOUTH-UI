@@ -1,6 +1,8 @@
 <template>
   <div class="youth-doc">
     <aside>
+      <h3>YOUTH-UI</h3>
+      <hr />
       <router-link v-for="(link, index) in data.links" :key="index" :to="link.path">{{
         link.name
       }}</router-link>
