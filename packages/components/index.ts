@@ -9,7 +9,7 @@ import { CheckBoxPlugin } from './CheckBox';
 import { IconPlugin } from './Icon';
 
 import type { App, Plugin } from 'vue';
-import { CheckBoxPlugin } from './CheckBox';
+
 
 const YouthPlugin: Plugin = {
   install(app: App) {
@@ -23,9 +23,6 @@ const YouthPlugin: Plugin = {
 
 export default YouthPlugin;
 
-export * from './Button'
-export * from './Input'
-export * from './CheckBox'
 export * from './Button';
 export * from './Input';
 export * from './Icon';
