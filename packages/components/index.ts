@@ -9,11 +9,13 @@ import { App, Plugin } from 'vue';
 
 import { ButtonPlugin } from './Button';
 import { InputPlugin } from './Input';
+import { CheckBoxPlugin } from './CheckBox';
 
 const YouthPlugin: Plugin = {
   install(app: App) {
     ButtonPlugin.install?.(app);
     InputPlugin.install?.(app);
+    CheckBoxPlugin.install?.(app);
   },
 };
 
@@ -21,3 +23,4 @@ export default YouthPlugin;
 
 export * from './Button'
 export * from './Input'
+export * from './CheckBox'
