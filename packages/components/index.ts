@@ -24,6 +24,4 @@ export default YouthPlugin;
 export * from './Button';
 export * from './Input';
 export * from './Icon';
-export * from './Button'
-export * from './Input'
-export * from './CheckBox'
+export * from './CheckBox';

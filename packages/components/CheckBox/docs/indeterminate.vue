@@ -13,7 +13,6 @@
 </template>
 
 <script>
-import { ref, watch } from 'vue';
 const cityOptions = ['上海', '北京', '广州', '深圳'];
 // const isCheckedAll = ref(checkedAll);
 
@@ -27,9 +26,8 @@ export default {
     };
   },
   methods: {
-    handleCheckedCitiesChange(value) {
+    handleCheckedCitiesChange() {
       console.log('handleCheckedCitiesChange');
-      let checkedCount = value.length;
       this.checkedAll = this.value.length === this.cities.length;
       // this.isIndeterminate = checkedCount > 0 && checkedCount < this.cities.length;
     },
@@ -38,6 +36,5 @@ export default {
       this.value = this.value.length === cityOptions.length ? [] : cityOptions;
     },
   },
-  setup(props, context) {},
 };
 </script>

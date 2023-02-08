@@ -23,10 +23,6 @@ export default {
       CheckboxGroup: this,
     };
   },
-  setup(props, context) {},
-  computed: {
-    
-  },
 };
 </script>
 <style scoped></style>

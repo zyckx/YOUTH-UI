@@ -16,6 +16,5 @@ export default {
       value: ['北京'],
     };
   },
-  setup(props, context) {},
 };
 </script>
