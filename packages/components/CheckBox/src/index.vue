@@ -68,7 +68,7 @@ export default {
   emits: ['update:value'],
   data() {
     return {
-      //超过限制
+      // 超过限制
       isLimitExceeded: false,
     };
   },
@@ -77,13 +77,13 @@ export default {
       return !!this.CheckboxGroup;
     },
     isChecked() {
-      //如果到max则checked的可以，若为min则checked不可以
-      let arr = JSON.parse(JSON.stringify(this.CheckboxGroup.value));
+      // 如果到max则checked的可以，若为min则checked不可以
+      const arr = JSON.parse(JSON.stringify(this.CheckboxGroup.value));
       return !(arr.indexOf(this.label) == -1);
     },
     isLimitDisabled() {
       const { max, min } = this.CheckboxGroup;
-      if (!!(max || min)) {
+      if (max || min) {
         if (this.model.length >= max) {
           return !this.isChecked;
         }
