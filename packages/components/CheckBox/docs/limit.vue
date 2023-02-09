@@ -1,10 +1,10 @@
 <template>
   <div>
     <y-checkbox-group v-model:value="value" :min="1" :max="3">
-      <y-checkbox label="北京"></y-checkbox>
-      <y-checkbox label="上海"></y-checkbox>
-      <y-checkbox label="广州"></y-checkbox>
-      <y-checkbox label="深圳"></y-checkbox>
+      <y-checkbox label="北京" />
+      <y-checkbox label="上海" />
+      <y-checkbox label="广州" />
+      <y-checkbox label="深圳" />
     </y-checkbox-group>
   </div>
 </template>

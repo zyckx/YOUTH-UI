@@ -7,16 +7,16 @@
     ]"
   >
     <input
+      v-model="model"
       class="y-checkbox-input"
       :class="[indeterminate ? 'is-indeterminate' : '']"
       type="checkbox"
       :value="label"
       :name="name"
-      v-model="model"
       :disabled="disabled"
     />
     <span class="y-checkbox-text"
-      ><slot></slot> <template v-if="!$slots.default">{{ label }}</template></span
+      ><slot /> <template v-if="!$slots.default">{{ label }}</template></span
     >
   </div>
 </template>
@@ -73,13 +73,13 @@ export default {
     };
   },
   computed: {
-    isGroup(): Boolean {
+    isGroup(): boolean {
       return !!this.CheckboxGroup;
     },
     isChecked() {
       // 如果到max则checked的可以，若为min则checked不可以
       const arr = JSON.parse(JSON.stringify(this.CheckboxGroup.value));
-      return !(arr.indexOf(this.label) == -1);
+      return !!arr.includes(this.label);
     },
     isLimitDisabled() {
       const { max, min } = this.CheckboxGroup;

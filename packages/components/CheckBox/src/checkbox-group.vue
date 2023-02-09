@@ -1,13 +1,13 @@
 <template>
   <div class="y-checkbox-group" role="group">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 <script>
 export default {
-  data() {
+  provide() {
     return {
-      isCheckedAll: false,
+      CheckboxGroup: this,
     };
   },
   props: {
@@ -18,9 +18,9 @@ export default {
     max: Number,
     disabled: Boolean,
   },
-  provide() {
+  data() {
     return {
-      CheckboxGroup: this,
+      isCheckedAll: false,
     };
   },
 };

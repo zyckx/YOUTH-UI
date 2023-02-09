@@ -7,7 +7,7 @@
     >
 
     <y-checkbox-group v-model:value="value" @change="handleCheckedCitiesChange">
-      <y-checkbox v-for="city in cities" :label="city" :key="city">{{ city }}</y-checkbox>
+      <y-checkbox v-for="city in cities" :key="city" :label="city">{{ city }}</y-checkbox>
     </y-checkbox-group>
   </div>
 </template>

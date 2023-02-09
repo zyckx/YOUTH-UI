@@ -22,5 +22,11 @@
     "compZhName": "图标",
     "compDesc": "YOUTH-UI 的 Icon 组件",
     "compClassName": "icon"
+  },
+  {
+    "compName": "Layout",
+    "compZhName": "布局",
+    "compDesc": "YOUTH-UI 通过基础的 24 分栏，迅速简便地创建布局。",
+    "compClassName": "layout"
   }
 ]

@@ -3,13 +3,14 @@
  *
  * 根据 /packages 目录下的组件所生成的模块导出，请勿手动修改
  */
+
 import { ButtonPlugin } from './Button';
 import { InputPlugin } from './Input';
 import { CheckBoxPlugin } from './CheckBox';
 import { IconPlugin } from './Icon';
-
+import { YcolPlugin } from './Ycol';
+import { YrowPlugin } from './Yrow';
 import type { App, Plugin } from 'vue';
-
 
 const YouthPlugin: Plugin = {
   install(app: App) {
@@ -17,6 +18,8 @@ const YouthPlugin: Plugin = {
     InputPlugin.install?.(app);
     CheckBoxPlugin.install?.(app);
     IconPlugin.install?.(app);
+    YcolPlugin.install?.(app);
+    YrowPlugin.install?.(app);
   },
 };
 
@@ -24,5 +27,7 @@ export default YouthPlugin;
 
 export * from './Button';
 export * from './Input';
-export * from './Icon';
 export * from './CheckBox';
+export * from './Icon';
+export * from './Ycol';
+export * from './Yrow';
