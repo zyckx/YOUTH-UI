@@ -8,6 +8,8 @@ import { ButtonPlugin } from './Button';
 import { InputPlugin } from './Input';
 import { CheckBoxPlugin } from './CheckBox';
 import { IconPlugin } from './Icon';
+
+import { RadioPlugin } from './Radio';
 import { YcolPlugin } from './Ycol';
 import { YrowPlugin } from './Yrow';
 import type { App, Plugin } from 'vue';
@@ -18,6 +20,8 @@ const YouthPlugin: Plugin = {
     InputPlugin.install?.(app);
     CheckBoxPlugin.install?.(app);
     IconPlugin.install?.(app);
+
+    RadioPlugin.install?.(app);
     YcolPlugin.install?.(app);
     YrowPlugin.install?.(app);
   },
@@ -29,5 +33,7 @@ export * from './Button';
 export * from './Input';
 export * from './CheckBox';
 export * from './Icon';
+
+export * from './Radio';
 export * from './Ycol';
 export * from './Yrow';
