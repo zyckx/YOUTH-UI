@@ -28,5 +28,5 @@ export default YouthPlugin;
 export * from './Button'
 export * from './Input'
 export * from './Icon'
-export * from './Ycol';
-export * from './Yrow';
+export * from './Ycol'
+export * from './Yrow'
