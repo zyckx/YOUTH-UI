@@ -1,5 +1,5 @@
-/node_modules
-/dist
+node_modules
+dist
 /docs
 /YOUTH-UI_ICONS/svg/node_modules
 /YOUTH-UI_ICONS/vue/node_modules
