@@ -56,11 +56,11 @@ const routerTplReplacer = (listFileContent) => {
   const routerMeta = {
     routes: listFileContent.map((comp) => {
       return `{
-    title: '${comp.compZhName}',
-    name: '${comp.compName}',
-    path: '/components/${comp.compName}',
-    component: () => import('packages/components/${comp.compName}/docs/README.md'),
-  }`;
+        title: '${comp.compZhName}',
+        name: '${comp.compName}',
+        path: '/components/${comp.compName}',
+        component: () => import('packages/components/${comp.compName}/docs/README.md'),
+      }`;
     }),
   };
   const routerFileContent = handlebars.compile(routerFileTpl, { noEscape: true })(routerMeta);
@@ -74,16 +74,40 @@ const installTsTplReplacer = (listFileContent) => {
   const installFileFrom = '.template/install.ts.tpl';
   const installFileTo = '../../packages/components/index.ts'; // 这里没有写错，别慌
   const installFileTpl = fs.readFileSync(resolve(__dirname, installFileFrom), 'utf-8');
+  const textimportPlugin = `\nimport { YcolPlugin } from './Ycol';\nimport { YrowPlugin } from './Yrow';\n`;
+  const textinstallPlugins = `\nYcolPlugin.install?.(app);\nYrowPlugin.install?.(app);\n`;
+  const textexportPlugins = `\nexport * from './Ycol'\nexport * from './Yrow'\n`;
   const installMeta = {
     importPlugins: listFileContent
-      .map(({ compName }) => `import { ${compName}Plugin } from './${compName}';`)
-      .join('\n'),
+      .map(({ compName }) => {
+        if (compName === 'Layout') {
+          return ``;
+        } else {
+          return `import { ${compName}Plugin } from './${compName}';`;
+        }
+      })
+      .join('\n')
+      .concat(textimportPlugin),
     installPlugins: listFileContent
-      .map(({ compName }) => `${compName}Plugin.install?.(app);`)
-      .join('\n    '),
+      .map(({ compName }) => {
+        if (compName === 'Layout') {
+          return ``;
+        } else {
+          return `${compName}Plugin.install?.(app);`;
+        }
+      })
+      .join('\n')
+      .concat(textinstallPlugins),
     exportPlugins: listFileContent
-      .map(({ compName }) => `export * from './${compName}'`)
-      .join('\n'),
+      .map(({ compName }) => {
+        if (compName === 'Layout') {
+          return ``;
+        } else {
+          return `export * from './${compName}'`;
+        }
+      })
+      .join('\n')
+      .concat(textexportPlugins),
   };
   const installFileContent = handlebars.compile(installFileTpl, { noEscape: true })(installMeta);
   fs.outputFile(resolve(__dirname, installFileTo), installFileContent, (err) => {
@@ -94,6 +118,13 @@ const installTsTplReplacer = (listFileContent) => {
 module.exports = (meta) => {
   compFilesTplReplacer(meta);
   const listFileContent = listJsonTplReplacer(meta);
+  // 遍历listFileContent,并打印
+  listFileContent.forEach((comp) => {
+    // 如果comp.compName是layout,从listFileContent中删除
+    if (comp.compName === 'layout') {
+      listFileContent.splice(listFileContent.indexOf(comp), 1);
+    }
+  });
   routerTplReplacer(listFileContent);
   installTsTplReplacer(listFileContent);
 
