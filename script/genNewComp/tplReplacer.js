@@ -118,13 +118,6 @@ const installTsTplReplacer = (listFileContent) => {
 module.exports = (meta) => {
   compFilesTplReplacer(meta);
   const listFileContent = listJsonTplReplacer(meta);
-  // 遍历listFileContent,并打印
-  listFileContent.forEach((comp) => {
-    // 如果comp.compName是layout,从listFileContent中删除
-    if (comp.compName === 'layout') {
-      listFileContent.splice(listFileContent.indexOf(comp), 1);
-    }
-  });
   routerTplReplacer(listFileContent);
   installTsTplReplacer(listFileContent);
 
