@@ -29,8 +29,8 @@ import { createRouter, createWebHashHistory } from 'vue-router'
      component: () => import('packages/components/Icon/docs/README.md'),
    },
    {
-     title: '图标',
-     name: 'Icon',
+     title: '多选框',
+     name: 'CheckBox',
      path: '/components/CheckBox',
      component: () => import('packages/components/CheckBox/docs/README.md'),
    },
