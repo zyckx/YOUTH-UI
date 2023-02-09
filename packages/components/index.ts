@@ -17,7 +17,6 @@ const YouthPlugin: Plugin = {
     InputPlugin.install?.(app);
     CheckBoxPlugin.install?.(app);
     IconPlugin.install?.(app);
-    CheckBoxPlugin.install?.(app);
   },
 };
 
