@@ -20,7 +20,6 @@ const YouthPlugin: Plugin = {
     InputPlugin.install?.(app);
     CheckBoxPlugin.install?.(app);
     IconPlugin.install?.(app);
-
     RadioPlugin.install?.(app);
     YcolPlugin.install?.(app);
     YrowPlugin.install?.(app);

@@ -80,7 +80,7 @@ const installTsTplReplacer = (listFileContent) => {
   const installMeta = {
     importPlugins: listFileContent
       .map(({ compName }) => {
-        if (compName === 'Layout') {
+        if (compName === 'Layout' || compName === 'Color') {
           return ``;
         } else {
           return `import { ${compName}Plugin } from './${compName}';`;
@@ -90,7 +90,7 @@ const installTsTplReplacer = (listFileContent) => {
       .concat(textimportPlugin),
     installPlugins: listFileContent
       .map(({ compName }) => {
-        if (compName === 'Layout') {
+        if (compName === 'Layout' || compName === 'Color') {
           return ``;
         } else {
           return `${compName}Plugin.install?.(app);`;
@@ -100,7 +100,7 @@ const installTsTplReplacer = (listFileContent) => {
       .concat(textinstallPlugins),
     exportPlugins: listFileContent
       .map(({ compName }) => {
-        if (compName === 'Layout') {
+        if (compName === 'Layout' || compName === 'Color') {
           return ``;
         } else {
           return `export * from './${compName}'`;
