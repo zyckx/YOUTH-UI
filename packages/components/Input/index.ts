@@ -1,9 +1,9 @@
-import { App, Plugin } from 'vue';
 import Input from './src/index.vue';
+import type { App, Plugin } from 'vue';
 
 export const InputPlugin: Plugin = {
   install(app: App) {
-    app.component('y-input', Input);
+    app.component('YInput', Input);
   },
 };
 

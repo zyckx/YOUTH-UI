@@ -43,6 +43,11 @@
         name: 'Color',
         path: '/components/Color',
         component: () => import('packages/components/Color/docs/README.md'),
+      },{
+        title: '日期选择器',
+        name: 'Date',
+        path: '/components/Date',
+        component: () => import('packages/components/Date/docs/README.md'),
       }];
  
  const routerConfig = {

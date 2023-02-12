@@ -40,5 +40,11 @@
     "compZhName": "颜色",
     "compDesc": "颜色说明文档",
     "compClassName": "color"
+  },
+  {
+    "compName": "Date",
+    "compZhName": "日期选择器",
+    "compDesc": "用于选择或输入日期",
+    "compClassName": "date"
   }
 ]
