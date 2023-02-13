@@ -1,7 +1,7 @@
 <template>
   <div class="youth-preview">
     <section>
-      <slot></slot>
+      <slot />
     </section>
 
     <div v-show="codeVisible" class="source-code">

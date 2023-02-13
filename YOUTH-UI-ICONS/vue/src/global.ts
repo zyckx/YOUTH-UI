@@ -1,16 +1,16 @@
-import * as icons from './components'
+import * as icons from './components';
 
-import type { App } from 'vue'
+import type { App } from 'vue';
 
 export interface InstallOptions {
   /** @default `YIcon` */
-  prefix?: string
+  prefix?: string;
 }
 export default (app: App, { prefix = 'YIcon' }: InstallOptions = {}) => {
   for (const [key, component] of Object.entries(icons)) {
-    app.component(prefix + key, component)
+    app.component(prefix + key, component);
   }
-}
+};
 
-export { icons }
-export * from './components'
+export { icons };
+export * from './components';

@@ -1,7 +1,7 @@
 <template>
   <div class="youth-doc">
     <aside>
-      <h3>YOUTH-UI</h3>
+      <img src="./assets/Youth-UI.jpeg" alt="YOUTH-UI的logo" class="logo" @click="gotoHome" />
       <hr />
       <router-link v-for="(link, index) in data.links" :key="index" :to="link.path">{{
         link.name
@@ -16,6 +16,7 @@
 <script setup>
 import { reactive } from 'vue';
 import ComponentList from 'packages/components/list.json';
+import router from './router';
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const data = reactive({
   links: ComponentList.map((item) => ({
@@ -23,6 +24,9 @@ const data = reactive({
     name: item.compZhName,
   })),
 });
+const gotoHome = () => {
+  router.go('/');
+};
 </script>
 
 <style lang="scss">
@@ -45,6 +49,11 @@ body {
     width: 100%;
     flex: 1;
     padding: 15px;
+  }
+  .logo {
+    width: 120px;
+    margin: 0 auto;
+    cursor: pointer;
   }
 }
 </style>
