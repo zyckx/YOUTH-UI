@@ -9,11 +9,11 @@
         :placeholder="placeholder"
         :autofocus="autofocus"
         :readonly="readonly"
-        :form="form"
         @focus="focus"
         @blur="blur"
         @input="iptChange"
         @change="change"
+        @clear="clear"
       />
       <transition name="slide-fade">
         <i
@@ -32,7 +32,7 @@
 <script setup>
 import { computed, onMounted, ref, useSlots } from 'vue';
 
-const emit = defineEmits(['update:modelValue', 'focus', 'blur', 'input', 'change']);
+const emit = defineEmits(['update:modelValue', 'focus', 'blur', 'input', 'change', 'clear']);
 const props = defineProps({
   modelValue: String || Number,
   disabled: Boolean,
@@ -59,7 +59,6 @@ const props = defineProps({
     default: '#0e80eb',
   },
   readonly: Boolean,
-  form: String,
 });
 const slot = useSlots();
 const isStyle = ref({});
@@ -143,14 +142,14 @@ const isClass = computed(() => {
 .y-input-password-default,
 .y-input-password-showpassword-default,
 .y-group-input-default {
+  position: relative;
+  box-sizing: border-box;
   width: 100%;
   height: 35px;
   border: 1px solid #dcdfe6f6;
   overflow: hidden;
   border-radius: 4px;
   transition: all 0.2s ease;
-  position: relative;
-  box-sizing: border-box;
   input {
     width: 100%;
     font-size: 14px;

@@ -28,5 +28,17 @@
     "compZhName": "布局",
     "compDesc": "YOUTH-UI 通过基础的 24 分栏，迅速简便地创建布局。",
     "compClassName": "layout"
+  },
+  {
+    "compName": "Radio",
+    "compZhName": "单选框",
+    "compDesc": "默认：这是一个新组件",
+    "compClassName": "radio"
+  },
+  {
+    "compName": "Color",
+    "compZhName": "颜色",
+    "compDesc": "颜色说明文档",
+    "compClassName": "color"
   }
 ]
