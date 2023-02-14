@@ -40,5 +40,11 @@
     "compZhName": "颜色",
     "compDesc": "颜色说明文档",
     "compClassName": "color"
+  },
+  {
+    "compName": "Select",
+    "compZhName": "选择器",
+    "compDesc": "默认：这是一个新组件",
+    "compClassName": "select"
   }
 ]
