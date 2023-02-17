@@ -29,7 +29,7 @@
         <div
           v-for="(item, index) in modelLabel"
           :key="index"
-          @click="handleClear(item)"
+          @click="!disabled && handleClear(item)"
           :class="{
             'is-disabled': disabled,
             'y-select-tags': !disabled,
@@ -207,12 +207,12 @@ export default {
   }
 
   .is-disabled {
-    cursor: not-allowed;
+    cursor: not-allowed !important;
     background-color: #f5f7fa;
     border-color: #e4e7ed;
     color: #c0c4cc;
 
-    pointer-events: none;
+    // pointer-events: none;
     padding: 1px 10px;
     height: 22px;
     line-height: 22px;
@@ -335,8 +335,10 @@ export default {
     }
   }
 }
+
 .removes {
   position: absolute;
+  z-index: 1000000;
   right: 0;
   top: 0;
   color: #999;
@@ -354,6 +356,7 @@ export default {
     transform: rotate(90deg);
   }
 }
+
 .downs {
   position: absolute;
   right: 0;
