@@ -6,8 +6,7 @@
  * 根据 /packages 目录下的组件所生成的组件类侧边导航栏配置，请勿手动修改
  */
 
-import { createRouter, createWebHashHistory } from 'vue-router'
- import type { RouterOptions } from 'vue-router';
+ import { createRouter, createWebHashHistory, RouterOptions } from 'vue-router'
 
  const routes = [{
         title: '按钮',
@@ -44,6 +43,11 @@ import { createRouter, createWebHashHistory } from 'vue-router'
         name: 'Color',
         path: '/components/Color',
         component: () => import('packages/components/Color/docs/README.md'),
+      },{
+        title: '选择器',
+        name: 'Select',
+        path: '/components/Select',
+        component: () => import('packages/components/Select/docs/README.md'),
       }];
  
  const routerConfig = {
