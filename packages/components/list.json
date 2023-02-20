@@ -19,7 +19,7 @@
   },
   {
     "compName": "Icon",
-    "compZhName": "图标",
+    "compZhName": "图标【*未实现*】",
     "compDesc": "YOUTH-UI 的 Icon 组件",
     "compClassName": "icon"
   },
@@ -40,6 +40,12 @@
     "compZhName": "颜色",
     "compDesc": "颜色说明文档",
     "compClassName": "color"
+  },
+  {
+    "compName": "Date",
+    "compZhName": "日期选择器",
+    "compDesc": "用于选择或输入日期",
+    "compClassName": "date"
   },
   {
     "compName": "Select",
