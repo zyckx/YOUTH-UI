@@ -50,6 +50,7 @@ defineEmits(['click']);
 </script>
 
 <style scoped lang="scss">
+@import '../../../style/global.scss';
 .y-button {
   display: inline-block;
   line-height: 1;
