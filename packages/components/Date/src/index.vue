@@ -28,7 +28,7 @@
                   <span v-if="dateShow"
                     ><i class="m-icon-arrow-double-left" @click="prevYear"
                   /></span>
-                  <span v-if="dateShow && type == 'date'" class="mzl-i-rotate"
+                  <span v-if="dateShow && type == 'date'" class="y-i-rotate"
                     ><i class="m-icon-arrow-right" @click="prevMonth"
                   /></span>
                 </div>
@@ -264,31 +264,28 @@
                     </tbody>
                   </table>
                 </div>
-                <div v-if="showToday && type == 'date'" class="mzl-today-box">
-                  <span class="mzl-today-span" @click="today">今天</span>
+                <div v-if="showToday && type == 'date'" class="y-today-box">
+                  <span class="y-today-span" @click="today">今天</span>
                 </div>
               </div>
               <!-- year -->
               <div
                 v-show="(!dateShow && !monthShow) || type == 'year'"
-                :class="['mzl-choose-year-box', `mzl-choose-year-box-${size}`]"
+                :class="['y-choose-year-box', `y-choose-year-box-${size}`]"
               >
                 <div v-for="(item, index) in yearList" :key="index">
                   <span
-                    :class="[{ active: selDate.year == item }, 'mzl-chooseYear-span']"
+                    :class="[{ active: selDate.year == item }, 'y-chooseYear-span']"
                     @click="dateYearSel(item)"
                     >{{ item }}</span
                   >
                 </div>
               </div>
               <!-- months -->
-              <div
-                v-show="monthShow"
-                :class="['mzl-choose-month-box', `mzl-choose-month-box-${size}`]"
-              >
+              <div v-show="monthShow" :class="['y-choose-month-box', `y-choose-month-box-${size}`]">
                 <div v-for="(item, index) in monthList" :key="index">
                   <span
-                    :class="[{ active: selDate.month == item.m1 }, 'mzl-chooseMonth-span']"
+                    :class="[{ active: selDate.month == item.m1 }, 'y-chooseMonth-span']"
                     @click="dateMonthSel(item)"
                     >{{ item.m }}</span
                   >
@@ -495,7 +492,7 @@ const vClickOutside = {
             el.contains(e.target) &&
             !e.target.className.includes('choosDateSpan') &&
             !e.target.className.includes('clearable-icon') &&
-            !e.target.className.includes('mzl-chooseYear-span')
+            !e.target.className.includes('y-chooseYear-span')
           ) {
             if (!show.value) {
               focus();
@@ -508,7 +505,7 @@ const vClickOutside = {
             el.contains(e.target) &&
             !e.target.className.includes('choosDateSpan') &&
             !e.target.className.includes('clearable-icon') &&
-            !e.target.className.includes('mzl-chooseMonth-span')
+            !e.target.className.includes('y-chooseMonth-span')
           ) {
             if (!show.value) {
               focus();
@@ -520,7 +517,7 @@ const vClickOutside = {
           el.contains(e.target) &&
           !e.target.className.includes('choosDateSpan') &&
           !e.target.className.includes('clearable-icon') &&
-          !e.target.className.includes('mzl-today-span')
+          !e.target.className.includes('y-today-span')
         ) {
           if (!show.value) {
             focus();
@@ -810,7 +807,7 @@ onMounted(() => {
           font-weight: 600;
         }
       }
-      span.mzl-i-rotate {
+      span.y-i-rotate {
         i {
           transform: rotateY(180deg);
         }
@@ -1005,7 +1002,7 @@ onMounted(() => {
         }
       }
     }
-    .mzl-today-box {
+    .y-today-box {
       width: 100%;
       height: 30px;
       text-align: center;
@@ -1145,8 +1142,8 @@ onMounted(() => {
     }
   }
 
-  .mzl-choose-year-box,
-  .mzl-choose-year-box-default {
+  .y-choose-year-box,
+  .y-choose-year-box-default {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -1181,7 +1178,7 @@ onMounted(() => {
       }
     }
   }
-  .mzl-choose-year-box-small {
+  .y-choose-year-box-small {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -1202,7 +1199,7 @@ onMounted(() => {
       }
     }
   }
-  .mzl-choose-year-box-mini {
+  .y-choose-year-box-mini {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -1223,8 +1220,8 @@ onMounted(() => {
       }
     }
   }
-  .mzl-choose-month-box,
-  .mzl-choose-month-box-default {
+  .y-choose-month-box,
+  .y-choose-month-box-default {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -1258,7 +1255,7 @@ onMounted(() => {
       }
     }
   }
-  .mzl-choose-month-box-small {
+  .y-choose-month-box-small {
     padding: 18px 8px;
     div {
       height: 55px;
@@ -1272,7 +1269,7 @@ onMounted(() => {
       }
     }
   }
-  .mzl-choose-month-box-mini {
+  .y-choose-month-box-mini {
     padding: 16px 6px;
     div {
       height: 50px;

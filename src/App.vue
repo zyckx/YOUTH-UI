@@ -16,8 +16,9 @@
 <script setup>
 import { reactive } from 'vue';
 import ComponentList from 'packages/components/list.json';
-import router from './router';
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
 const data = reactive({
   links: ComponentList.map((item) => ({
     path: `/components/${item.compName}`,
@@ -25,7 +26,7 @@ const data = reactive({
   })),
 });
 const gotoHome = () => {
-  router.go('/');
+  router.push('/');
 };
 </script>
 
